@@ -19,7 +19,7 @@ const Heading = styled.h1`
   font-weight: bold;
   font-size: 50px;
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 `;
 const Heading2 = styled(Heading)`
   font-size: 40px;

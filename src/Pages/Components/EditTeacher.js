@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import { Grid, Button, Paper, TextField } from "@material-ui/core";
 
-export default class EditStudent extends Component {
+export default class EditTeacher extends Component {
   constructor(props) {
     super(props);
     const Data = this.props.data;
     this.state = {
       name: Data.Name,
-      rollNo: Data.RollNo,
-      class: Data.Class,
-      section:Data.Section
+      TeacherID: Data.TeacherID,
+      Classes: Data.Classes,
     };
   }
   render() {
@@ -52,9 +51,9 @@ export default class EditStudent extends Component {
                 <TextField
                   style={{ width: "70%" }}
                   id="outlined-basic"
-                  value={this.state.class}
+                  value={this.state.TeacherID}
                   onChange={(e) => {
-                    this.setState({ class: e.target.value });
+                    this.setState({ TeacherID: e.target.value });
                   }}
                   label="TeacherID"
                   variant="outlined"
@@ -63,27 +62,16 @@ export default class EditStudent extends Component {
               <Grid item style={{ margin: "0.4rem" }} xs={12} sm={10}>
                 <TextField
                   style={{ width: "70%" }}
-                  value={this.state.rollNo}
+                  value={this.state.Classes}
                   onChange={(e) => {
-                    this.setState({ rollNo: e.target.value });
+                    this.setState({ Classes: e.target.value });
                   }}
                   id="outlined-basic"
                   label="Classes"
                   variant="outlined"
                 />
               </Grid>
-              <Grid item style={{ margin: "0.4rem" }} xs={12} sm={10}>
-                <TextField
-                  style={{ width: "70%" }}
-                  value={this.state.section}
-                  onChange={(e) => {
-                    this.setState({ section: e.target.value });
-                  }}
-                  id="outlined-basic"
-                  label="Classes"
-                  variant="outlined"
-                />
-              </Grid>
+      
               <Grid item style={{ margin: "0.4rem" }} xs={12} sm={10}>
                 <Button
                   style={{ width: "50%", backgroundColor: "#000" }}
@@ -94,9 +82,8 @@ export default class EditStudent extends Component {
                     this.props.ChangeValue(
                       this.props.index,
                       this.state.name,
-                      this.state.class,
-                      this.state.rollNo,
-                      this.state.section
+                      this.state.TeacherID,
+                      this.state.Classes,
                     )
                   }
                 >
