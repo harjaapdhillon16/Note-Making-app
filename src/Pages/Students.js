@@ -84,7 +84,7 @@ class Student extends React.Component {
    this.setState({students:StudentsData})
    this.setState({editStudentHtml:null})
   }
-  AddValue(name,classNo,roll,section){
+  AddValue(i,name,classNo,roll,section){
     const NewData = {
       Name:name,
       Class:classNo,
