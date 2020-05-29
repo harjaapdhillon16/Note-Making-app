@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Grid, Button, Paper, TextField } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
 import ShowTeacherData from './Components/ShowTeacherData';
-import EditStudent from './Components/EditStudent';
+import EditStudent from './Components/EditTeacher';
 import AddTeacher from './Components/AddTeacher';
 
 const Container = styled.div`

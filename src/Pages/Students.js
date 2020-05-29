@@ -63,6 +63,7 @@ class Student extends React.Component {
     this.showEditStudentHtml  = this.showEditStudentHtml.bind(this)
     this.ChangeValues = this.ChangeValues.bind(this)
     this.showAddStudentHtml = this.showAddStudentHtml.bind(this)
+    this.AddValue = this.AddValue.bind(this)
   }
   Delete(i) {
     const NewList = this.state.students;
@@ -83,7 +84,7 @@ class Student extends React.Component {
    this.setState({students:StudentsData})
    this.setState({editStudentHtml:null})
   }
-  ChangeValues(name,classNo,roll,section){
+  AddValue(name,classNo,roll,section){
     const NewData = {
       Name:name,
       Class:classNo,

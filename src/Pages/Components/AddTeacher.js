@@ -66,7 +66,7 @@ export default class AddStudent extends Component {
                     this.setState({ Classes: e.target.value });
                   }}
                   id="outlined-basic"
-                  label="Classes (Leave a Space after Each class)"
+                  label="Classes (Leave Space after class)"
                   variant="outlined"
                 />
               </Grid>
